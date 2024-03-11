@@ -1,68 +1,161 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* utilities */
-.flex{
- display: flex;   
-}
-
-.flex-column{
-    flex-direction: column;
-}
-
-
-/* utilities */
-
-body{
-  background-color: beige; 
+.flex {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  min-height: 100vh; 
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+
+/* utilities */
+/* parte contatti */
+
+body {
   background-color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: beige;
+  overflow: hidden;
 }
 
-.general-container{
-    margin: auto ;
-    height: 700px;
-    width: 80%;
-    border: 3px solid black;
+.general-container {
+  margin: auto;
+  height: 700px;
+  width: 80%;
+  border: 3px solid black;
+  position: relative;
 }
 
-.contact-container{
-    height: 100%;
-    width: 30%;
-    border: 1px solid black;
-}
-
-.chat-container{
+.contact-container {
   height: 100%;
-  width: 70%;
-  border: 1px solid black;  
+  width: 30%;
+  border: 1px solid black;
+  overflow-y: auto;
 }
 
-.header-cont{
+.header-cont {
+  height: 50px;
+  width: 100%;
+  border: 1px black solid;
+  top: 0;
+  background-color: lightgrey;
+  position: sticky;
+  z-index: 1;
+}
+
+.notifiche {
+  height: 70px;
+  width: 100%;
+  border: 1px solid black;
+  background-color: aqua;
+}
+
+.find-contact {
+  width: 100%;
+}
+
+.contact-card {
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  border: 2px solid black;
+}
+
+/* fine parte contatti */
+
+.header-chat{
+ width: 100%;
  height: 50px;
- width: 100%;
- border: 1px black solid;
-}
-
-.notifiche{
- height: 70px;
- width: 100%;
  border: 1px solid black;
- background-color: aqua;
-
+ background-color: lightgrey;
+ position: sticky;
+ z-index: 1;
+ top: 0;
 }
 
-.find-contact{
-   width: 100%;
+.chat-container {
+    height: 100%;
+    width: 70%;
+    border: 1px solid black;
+    background-image: url(../img/mine.jpg);
+    position: relative;
+    overflow-y: scroll;
+  }
+
+  .msg-send{
+    height: fit-content;
+    width: fit-content;
+   background-color: greenyellow;
+   margin-top: 40px;
+   margin-left: 300px;
+   margin-right: 40px;
+   border-radius: 4px;
+   padding: 10px;
+  }
+
+
+
+  .msg-recevid{
+    height: fit-content;
+    width: fit-content;
+   background-color: white;
+   margin-top: 40px;
+   margin-left: 40px;
+   margin-right: 300px;
+   border-radius: 4px;
+   padding: 10px;
+  }
+
+
+.chat-write{
+width: 100%;
+height: 40px;
+position: sticky;
+bottom: 0;
 }
 
-.contact-card{
+
+
+
+@media screen and (min-width :748px ) {
+    .general-container{
+        width: 100%;
+        height: 100%;
+    }
     
-}
+    .contact-container{
+        width: 10%;
+        height: 100%;
+    
+    }
+    .chat-container{
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+        
+    }
 
+
+    @media screen and (min-width :478px ) {
+        .general-container{
+            width: 100%;
+            height: 100%;
+        }
+
+        .contact-container{
+            display: none;
+        }
+
+
+    }
