@@ -13,6 +13,10 @@
   flex-direction: row;
 }
 
+img{
+  width: 100%;
+}
+
 
 /* utilities */
 /* parte contatti */
@@ -29,22 +33,22 @@ body {
 
 .general-container {
   margin: auto;
-  height: 700px;
-  width: 80%;
+  height: 80vh;
+  width: 90vw;
   border: 3px solid black;
   position: relative;
 }
 
 .contact-container {
   height: 100%;
-  width: 30%;
+  width: 300px;
   border: 1px solid black;
   overflow-y: auto;
 }
 
 .header-cont {
   height: 50px;
-  width: 100%;
+  width: 300px;
   border: 1px black solid;
   top: 0;
   background-color: lightgrey;
@@ -67,7 +71,25 @@ body {
   width: 100%;
   height: 60px;
   background-color: white;
-  border: 2px solid black;
+  border: 2px solid lightgray;
+}
+
+
+.contact-img{
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+
+
+}
+
+.contact-img img{
+  border-radius: 50%;
+
+}
+.contact-name{
+  font-size: 0.5rem;
+  padding: 5px;
 }
 
 /* fine parte contatti */
@@ -84,12 +106,21 @@ body {
 
 .chat-container {
     height: 100%;
-    width: 70%;
+    width: 100%;
     border: 1px solid black;
     background-image: url(../img/mine.jpg);
     position: relative;
     overflow-y: scroll;
   }
+
+
+
+
+.msg{
+  height: calc(100%- 90px);
+
+}
+
 
   .msg-send{
     height: fit-content;
@@ -120,42 +151,54 @@ body {
 width: 100%;
 height: 40px;
 position: sticky;
-bottom: 0;
+border: 1px solid black;
+
+
 }
 
 
 
+@media screen and (max-width:748px ) {
+  .general-container{
+    width: 100vh;
+    height: 100vh;
+  }
+.contact-container{
+   width: 60px;
+}
+  .contact-name{
+    display: none;
+  }
+.notifiche{
+  display: none;
+}
 
-@media screen and (min-width :748px ) {
-    .general-container{
-        width: 100%;
-        height: 100%;
-    }
-    
-    .contact-container{
-        width: 10%;
-        height: 100%;
-    
-    }
-    .chat-container{
-        width: 100%;
-        height: 100%;
-    }
-    
-    
-        
-    }
+.find-contact{
+  display: none;
+}
 
 
-    @media screen and (min-width :478px ) {
-        .general-container{
-            width: 100%;
-            height: 100%;
-        }
-
-        .contact-container{
-            display: none;
-        }
+}
 
 
-    }
+@media screen and (max-width:478px ) {
+  .general-container{
+    width: 100vh;
+    height: 100vh;
+  }
+.contact-container{
+   display: none;
+}
+  .contact-name{
+    display: none;
+  }
+.notifiche{
+  display: none;
+}
+
+.find-contact{
+  display: none;
+}
+
+
+}
